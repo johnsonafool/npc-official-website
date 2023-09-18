@@ -1,0 +1,9 @@
+@import "../shared";
+@import "home-area/first-area";
+@import "home-area/article-block";
+
+@include _page("home") {
+  @include fix-100vh-in-mobile-WebKit;
+  @include first-area;
+  @include article-block;
+}
