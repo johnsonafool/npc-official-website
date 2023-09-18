@@ -104,11 +104,11 @@ export default defineComponent({
         link: joinDiscordLink,
         external: true
       },
-      {
-        name: "CTF",
-        link: "https://entroy.tk",
-        external: true
-      },
+      // {
+      //   name: "CTF",
+      //   link: "https://entroy.tk",
+      //   external: true
+      // },
       {
         name: "TAT",
         link: tatNavigationUrl,
