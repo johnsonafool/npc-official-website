@@ -21,15 +21,6 @@
       </div>
 
       <div class="slide-button slide-button__right">›</div>
-      <ExternalLink to="https://qrcode.ntut.club">
-        <svg class="qrcode-logo" fill="white" viewBox="0 0 1 1">
-          <use xlink:href="#qr-code.svg"/>
-          _
-        </svg>
-      </ExternalLink>
-      <button class="small regular-button login-button" disabled>
-        登入
-      </button>
     </div>
   </div>
 </template>
