@@ -52,20 +52,16 @@
   <!--    </template>-->
   <!--  </Article>-->
 
-  <Article :buttons="ctfArticleButtons" title="CTF 搶旗賽">
+  <Article title="小 N 的洞窟探險">
     <template #picture>
-      <img alt="" src="https://i.imgur.com/gs3j7cz.webp">
+      <img alt="" src="/npc-7th.webp">
     </template>
     <template #textContent>
-      在許多的競賽遊戲中，奪下對手的旗幟是一種勝利的宣告。
+      為了「社團體驗」專門設計的遊戲
       <br/><br/>
-      而CTF(Capture The Flag)是資訊安全領域的競賽，玩家必須要有能力分析系統漏洞， 且利用該漏洞撰寫攻擊程式。
+      副社長自學（現學現賣） Unity 撰寫
       <br/><br/>
-      而漏洞包含了網頁安全、密碼學、逆向工程等等，攻擊成功後可取得該題的旗幟(Flag)，玩家將拿到的 Flag 上交到伺服器後就可得分。
-      <br/><br/>
-      現在，我們社團也有一些的題目，給對資安有興趣卻不知道從何著手的同學。
-      <br/><br/>
-      歡迎各位來小試身手，而若各位在解題中遇到任何問題，也可以直接私訊粉專，我們將會有專人來為你解答。
+      7th 幹部們共同構思劇本、素材、題目、遊戲內容，於一個月內製作完成。
     </template>
   </Article>
 
