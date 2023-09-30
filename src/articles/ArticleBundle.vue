@@ -128,7 +128,7 @@
   <Article id="about-block" picture-flex-wrap="wrap" title="About us">
     <template #picture>
       <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-              src="https://www.youtube-nocookie.com/embed/qGNUgFJYMdI"
+              src="https://www.youtube-nocookie.com/embed/IUbR7TdzZYA"              
               style="border: 0" title="介紹影片"/>
     </template>
     <template #textContent>
