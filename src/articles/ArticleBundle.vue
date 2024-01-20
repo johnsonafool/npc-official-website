@@ -52,16 +52,14 @@
   <!--    </template>-->
   <!--  </Article>-->
 
-  <Article title="小 N 的洞窟探險">
+  <Article bg-color="#5865F2" textColor="white" title="小 N 的洞窟探險">
     <template #picture>
       <img alt="" src="/npc-7th.webp">
     </template>
     <template #textContent>
-      為了「社團體驗」專門設計的遊戲
-      <br/><br/>
-      副社長自學（現學現賣） Unity 撰寫
-      <br/><br/>
-      7th 幹部們共同構思劇本、素材、題目、遊戲內容，於一個月內製作完成。
+    你對創新的遊戲體驗感興趣嗎？來加入我們，體驗一款專為「社團體驗」量身打造的遊戲！這款遊戲是由我們的副社長親自學習 Unity 並進行開發。
+    <br/><br/>
+    在短短一個月內，第七屆 NPC 幹部們攜手合作製作，從劇本到素材，題目以及遊戲內容。這不僅是一款遊戲，更是團隊合作和創意的展現。    
     </template>
   </Article>
 
