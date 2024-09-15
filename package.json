@@ -12,7 +12,12 @@
     "postinstall": "nuxt prepare && pnpm exec simple-git-hooks"
   },
   "dependencies": {
+    "@iconify-json/mingcute": "^1.2.0",
+    "@vueuse/core": "^11.0.3",
+    "@vueuse/nuxt": "^11.0.3",
     "nuxt": "3.13.1",
+    "radix-vue": "^1.9.5",
+    "unplugin-icons": "^0.19.3",
     "vue": "3.5.2",
     "vue-router": "4.4.3"
   },

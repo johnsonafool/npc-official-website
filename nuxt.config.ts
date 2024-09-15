@@ -4,5 +4,14 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  modules: [
+    '@vueuse/nuxt',
+    'radix-vue/nuxt',
+    'unplugin-icons/nuxt',
+  ],
+  css: [
+    'assets/reset.css',
+    'assets/cubic-11.css',
+  ],
 })
