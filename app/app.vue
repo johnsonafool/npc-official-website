@@ -10,6 +10,7 @@ import IconClose from '~icons/mingcute/close-fill'
 import IconMenu from '~icons/mingcute/menu-fill'
 
 useHead({
+  title: '北科程式設計研究社',
   link: [
     { rel: 'manifest', href: '/manifest.webmanifest' },
     { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
