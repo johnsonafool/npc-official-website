@@ -9,7 +9,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && pnpm exec simple-git-hooks"
+    "postinstall": "nuxt prepare && test -z $GITHUB_ACTIONS && simple-git-hooks || true"
   },
   "dependencies": {
     "@iconify-json/mingcute": "1.2.0",
