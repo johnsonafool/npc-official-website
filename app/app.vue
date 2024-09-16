@@ -3,10 +3,13 @@ import { breakpointsSematic } from '@vueuse/core'
 import IconMoon from '~icons/mingcute/moon-fill'
 import IconDiscord from '~icons/mingcute/discord-fill'
 import IconGitHub from '~icons/mingcute/github-fill'
+import IconClose from '~icons/mingcute/close-fill'
 import IconMenu from '~icons/mingcute/menu-fill'
 
 const breakpoints = useBreakpoints(breakpointsSematic)
 const mobile = breakpoints.smaller('tablet')
+
+const mobileMenuOpen = ref(false)
 </script>
 
 <template>
@@ -21,9 +24,10 @@ const mobile = breakpoints.smaller('tablet')
         v-if="mobile"
         class="right"
       >
-        <DropdownMenuRoot>
+        <DropdownMenuRoot v-model:open="mobileMenuOpen">
           <DropdownMenuTrigger class="mobile-menu-trigger">
-            <IconMenu />
+            <IconClose v-if="mobileMenuOpen" />
+            <IconMenu v-else />
           </DropdownMenuTrigger>
           <DropdownMenuPortal>
             <DropdownMenuContent class="mobile-menu-content">
@@ -148,8 +152,8 @@ body {
 
 .mobile-menu-trigger {
   all: unset;
-  padding: 0.25rem;
-  :hover {
+  padding: 0.5rem;
+  &:hover {
     cursor: pointer;
   }
 }
