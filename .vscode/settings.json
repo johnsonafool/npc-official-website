@@ -48,6 +48,12 @@
     "postcss"
   ],
 
+  // Markdownlint
+  "markdownlint.config": {
+    "first-line-h1": false,
+    "no-inline-html": false
+  },
+
   // Use the workspace version of TypeScript
   "typescript.tsdk": "node_modules/typescript/lib"
 }
