@@ -10,18 +10,4 @@ export default defineNuxtConfig({
     'radix-vue/nuxt',
     'unplugin-icons/nuxt',
   ],
-  app: {
-    head: {
-      link: [
-        { rel: 'manifest', href: '/manifest.webmanifest' },
-        { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
-        { rel: 'icon', href: '/icon.svg', type: 'image/svg+xml' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-      ],
-    },
-  },
-  css: [
-    'assets/reset.css',
-    'assets/cubic-11.css',
-  ],
 })

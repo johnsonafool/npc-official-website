@@ -1,10 +1,22 @@
 <script setup lang="ts">
+import 'assets/reset.css'
+import 'assets/cubic-11.css'
+
 import { breakpointsSematic } from '@vueuse/core'
 import IconMoon from '~icons/mingcute/moon-fill'
 import IconDiscord from '~icons/mingcute/discord-fill'
 import IconGitHub from '~icons/mingcute/github-fill'
 import IconClose from '~icons/mingcute/close-fill'
 import IconMenu from '~icons/mingcute/menu-fill'
+
+useHead({
+  link: [
+    { rel: 'manifest', href: '/manifest.webmanifest' },
+    { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
+    { rel: 'icon', href: '/icon.svg', type: 'image/svg+xml' },
+    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+  ],
+})
 
 const breakpoints = useBreakpoints(breakpointsSematic)
 const mobile = breakpoints.smaller('tablet')
