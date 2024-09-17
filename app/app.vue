@@ -19,6 +19,9 @@ useHead({
   ],
 })
 
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+
 const routes = {
   '/': '關於',
   '/projects': '專案',
