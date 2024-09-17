@@ -241,7 +241,7 @@ header {
   }
 
   .separator {
-    border-top: calc(1rem / 11) solid darkgray;
+    border-top: calc(1em / 11) solid darkgray;
   }
 }
 </style>
