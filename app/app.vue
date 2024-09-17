@@ -95,7 +95,7 @@ const [mobileMenuOpen, toggleMobileMenu] = useToggle(false)
       </template>
     </div>
 
-    <ul
+    <menu
       v-if="mobileMenuOpen"
       id="header-mobile-menu"
     >
@@ -130,7 +130,7 @@ const [mobileMenuOpen, toggleMobileMenu] = useToggle(false)
           <IconMoon />深色主題
         </button>
       </li>
-    </ul>
+    </menu>
   </header>
 
   <NuxtPage />
@@ -145,7 +145,8 @@ header {
   background-color: #333;
   color: white;
 
-  ul {
+  ul,
+  menu {
     display: flex;
     gap: 0.5rem;
     padding: 0;
