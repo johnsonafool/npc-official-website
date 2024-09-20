@@ -36,65 +36,65 @@ const [mobileMenuOpen, toggleMobileMenu] = useToggle(false)
 <template>
   <NuxtRouteAnnouncer />
 
-  <header>
-    <div id="header-container">
-      <div class="left">
-        <a href="/">
-          <img src="assets/npc-horizontal.svg">
-        </a>
-      </div>
-
-      <template v-if="isMobile">
-        <div class="right">
-          <ul>
-            <li>
-              <button @click="toggleMobileMenu()">
-                <IconClose v-if="mobileMenuOpen" />
-                <IconMenu v-else />
-              </button>
-            </li>
-          </ul>
-        </div>
-      </template>
-
-      <template v-else>
-        <nav class="center">
-          <ul>
-            <li
-              v-for="(route, path) in routes"
-              :key="path"
-            >
-              <NuxtLink :to="path">
-                {{ route }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="right">
-          <ul>
-            <li>
-              <a
-                href="https://to.ntut.club/discord"
-                target="_blank"
-              ><IconDiscord /></a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/NTUT-NPC"
-                target="_blank"
-              ><IconGitHub /></a>
-            </li>
-            <li>
-              <button @click="toggleDark()">
-                <IconMoon />
-              </button>
-            </li>
-          </ul>
-        </div>
-      </template>
+  <header id="header">
+    <div class="left">
+      <a href="/">
+        <img src="assets/npc-horizontal.svg">
+      </a>
     </div>
 
+    <template v-if="isMobile">
+      <div class="right">
+        <ul>
+          <li>
+            <button @click="toggleMobileMenu()">
+              <IconClose v-if="mobileMenuOpen" />
+              <IconMenu v-else />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </template>
+
+    <template v-else>
+      <nav class="center">
+        <ul>
+          <li
+            v-for="(route, path) in routes"
+            :key="path"
+          >
+            <NuxtLink :to="path">
+              {{ route }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="right">
+        <ul>
+          <li>
+            <a
+              href="https://to.ntut.club/discord"
+              target="_blank"
+            ><IconDiscord /></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/NTUT-NPC"
+              target="_blank"
+            ><IconGitHub /></a>
+          </li>
+          <li>
+            <button @click="toggleDark()">
+              <IconMoon />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </template>
+  </header>
+
+  <Transition name="menu">
     <menu
       v-if="mobileMenuOpen"
       id="header-mobile-menu"
@@ -131,7 +131,7 @@ const [mobileMenuOpen, toggleMobileMenu] = useToggle(false)
         </button>
       </li>
     </menu>
-  </header>
+  </Transition>
 
   <NuxtPage />
 </template>
@@ -141,12 +141,13 @@ body {
   font-family: 'Cubic 11';
 }
 
-header {
+#header,
+#header-mobile-menu {
   background-color: #333;
   color: white;
 
   ul,
-  menu {
+  & {
     display: flex;
     gap: 0.5rem;
     padding: 0;
@@ -168,14 +169,9 @@ header {
     display: inline-block;
     padding: 0.5rem;
   }
-
-  &:has(#header-mobile-menu) {
-    position: fixed;
-    inset: 0;
-  }
 }
 
-#header-container {
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -206,13 +202,21 @@ header {
   }
 }
 
+.menu-enter-from,
+.menu-leave-to {
+  opacity: 0;
+  transform: translateY(-1rem);
+}
+
 #header-mobile-menu {
-  height: 100%;
-  font-size: 2rem;
+  position: absolute;
+  inset: 4rem 0 0 0;
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
   gap: 1.5rem;
+  font-size: 2rem;
+  transition: all 0.4s ease;
 
   li {
     display: flex;
