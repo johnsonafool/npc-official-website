@@ -10,4 +10,9 @@ export default defineNuxtConfig({
     'radix-vue/nuxt',
     'unplugin-icons/nuxt',
   ],
+  postcss: {
+    plugins: {
+      'postcss-nesting': {},
+    },
+  },
 })

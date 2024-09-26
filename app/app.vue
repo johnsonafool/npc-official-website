@@ -136,7 +136,7 @@ const [mobileMenuOpen, toggleMobileMenu] = useToggle(false)
   <NuxtPage />
 </template>
 
-<style>
+<style lang="postcss">
 body {
   font-family: 'Cubic 11';
 }
