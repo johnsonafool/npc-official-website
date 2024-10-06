@@ -28,6 +28,7 @@ const routes = {
   '/projects/shorts': '短褲 Shorts',
   '/projects/tat': 'TAT - 北科生活',
   '/projects/unity-game': '小 N 的洞窟探險',
+  '/projects/emily': 'Emily',
 }
 
 const breakpoints = useBreakpoints(breakpointsSematic)
