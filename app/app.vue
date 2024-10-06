@@ -25,6 +25,9 @@ const toggleDark = useToggle(isDark)
 const routes = {
   '/': '關於',
   '/projects': '專案',
+  '/projects/shorts': '短褲 Shorts',
+  '/projects/tat': 'TAT - 北科生活',
+  '/projects/unity-game': '小 N 的洞窟探險',
 }
 
 const breakpoints = useBreakpoints(breakpointsSematic)
